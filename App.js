@@ -1,25 +1,5 @@
-{/* 
-    <div id='parent'>
-     <div id='child1'>
-        <h1> i'm h1 tag </h1>
-        <h2> i'm h2 tag </h2>
-     </div>
-     <div id='child2'>
-        <h1> i'm h1 tag </h1>
-        <h2> i'm h2 tag </h2>   
-     </div>
-    </div>
-
-    creating this using react.createElement !!
- */}
-
-
-// const heading = React.createElement(
-//     'h1',
-//     { id:'heading' },
-//       "!! hello world, using React CDNs !!"
-//     );
-
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 const parent = React.createElement(
     'div',
     { id: "parent" },
