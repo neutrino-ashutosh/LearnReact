@@ -1,4 +1,4 @@
-#functionalities of parcel :[read parceljs.org to understand parcel better ]
+## functionalities of parcel :[read https://www.parceljs.org to understand parcel better ]
 - creates dev build
 - creates local server for you
 - do HMR [hot module replacement] for you
