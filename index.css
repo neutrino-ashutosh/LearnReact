@@ -45,20 +45,10 @@
     cursor: pointer;
 }
 
-.body {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    padding: 10px;
-}
-
 .filter-btn {
    margin: 10px;
    padding: 10px;
    cursor: pointer;
-}
-.filter-btn:hover{
-    
 }
 
 .res-container {
@@ -109,3 +99,12 @@
     border-radius: 10px;
 }
 
+.filter{
+    display: flex;
+}
+
+.search{
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
