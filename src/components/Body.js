@@ -22,41 +22,48 @@ const Body = ()=>{
     setFilteredRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     console.log(json);
   }
+
   return (
-      <div className='body'>
-          <div className='filter'> 
-            <div className="search">
-              <input type="text" 
-              className="search-box" 
-              value={searchText}
-              onChange={(e) => setSearchText(e.target.value)} ></input>
-              <button onClick={() => {
+    <div className='body'>
 
-                const filteredRestaurant = listOfRestaurants.filter(
-                  (res) => res.info.name.toLowerCase().includes(searchText.toLowerCase())
-                );
-                setFilteredRestaurant(filteredRestaurant);
+      <div className='filter'> 
 
-              }}>Search</button>
-            </div>
-            
-            <button className='filter-btn'
-             onClick={()=> {
-              const filteredList = listOfRestaurants.filter(
-                (res)=> res.info.avgRating > 4.4
-              );
-              setListOfRestaurants(filteredList);
-              }}
-              >
-                Top Rated Restaurants 
-              </button>
-          </div>
-          <div className='res-container'>
-           {filteredRestaurant.map((restaurant)=> (
-            <RestaurantCard key={restaurant.info.id} resData={restaurant}/>
-            ))}                
-          </div>
+        <div className="search">
+          <input type="text" 
+          className="search-box" 
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)} ></input>
+          <button onClick={() => {
+
+            const filteredRestaurant = listOfRestaurants.filter(
+              (res) => res.info.name.toLowerCase().includes(searchText.toLowerCase())
+            );
+            setFilteredRestaurant(filteredRestaurant);
+
+          }}>
+            Search</button>
+        </div>
+        
+        <button className='filter-btn'
+          onClick={()=> {
+          const filteredList = listOfRestaurants.filter(
+            (res)=> res.info.avgRating > 4.4
+          );
+          setListOfRestaurants(filteredList);
+          }}
+          >
+            Top Rated Restaurants 
+        </button>
+
       </div>
+
+      <div className='res-container'>
+        {filteredRestaurant.map((restaurant)=> (
+        <RestaurantCard key={restaurant.info.id} resData={restaurant}/>
+        ))}                
+      </div>
+      
+    </div>
   )
 }
 
