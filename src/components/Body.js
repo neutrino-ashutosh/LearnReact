@@ -14,7 +14,7 @@ const Body = ()=>{
 
   const fetchData = async () => {
     const data = await fetch(
-      'http://localhost:3000/api/restaurants?lat=28.5399515&lng=77.25915789999999'
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.5399515&lng=77.25915789999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
 
     const json = await data.json();
@@ -60,7 +60,7 @@ const Body = ()=>{
       <div className='res-container'>
         {filteredRestaurant.map((restaurant)=> (
         <RestaurantCard key={restaurant.info.id} resData={restaurant}/>
-        ))}                
+        ))}               
       </div>
       
     </div>
