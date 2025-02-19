@@ -1,22 +1,22 @@
-.body {
+/* .body {
     max-width: 1200px;
     margin: 20px auto;
-}
+} */
 
-.app {
+/* .app {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;
     padding: 20px;
-}
+} */
 
-.header {
+/* .header {
     width: 100%;
     background-color: #333;
     color: white;
     padding: 10px;
-}
+} */
 
-.logo-container {
+/* .logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,9 +25,9 @@
 .logo {
     max-width: 100px;
     height: auto;
-}
+} */
 
-.nav-container {
+/* .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,9 +39,9 @@
     display: flex;
     gap: 40px;
     padding: 0;
-}
+} */
 
-.nav-items li {
+/* .nav-items li {
     cursor: pointer;
 }
 
@@ -49,57 +49,57 @@
    margin: 10px;
    padding: 10px;
    cursor: pointer;
-}
+} */
 
-.res-container {
+/* .res-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Flexible columns */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
-    max-width: 1200px; /* Set a max width for elegance */
-    margin: 0 auto; /* Center align */
-}
+    max-width: 1200px; 
+    margin: 0 auto; 
+} */
 
-.res-card {
+/* .res-card {
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 15px;
     text-align: center;
     transition: transform 0.2s ease-in-out;
-}
+} */
 
-.res-card:hover {
+/* .res-card:hover {
     transform: scale(1.05);
-}
+} */
 
-.res-card h3 {
+/* .res-card h3 {
     margin: 10px 0 5px;
     font-size: 18px;
     font-weight: bold;
     color: #333;
-}
+} */
 
-.res-card h4 {
+/* .res-card h4 {
     margin: 5px 0;
     font-size: 14px;
     color: #666;
     font-weight: 500;
-}
+} */
 
-.res-container :hover{
+/* .res-container :hover{
     border: 1px solid #333;
     cursor: pointer;
-}
+} */
 
-.res-logo {
+/* .res-logo {
     width: 100%;
     height: 180px;
     object-fit: cover;
     border-radius: 10px;
-}
+} */
 
-.filter{
+/* .filter{
     display: flex;
 }
 
@@ -107,9 +107,9 @@
     margin: 10px;
     padding: 10px;
     cursor: pointer;
-}
+} */
 
-.shimmer-container {
+/* .shimmer-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -128,41 +128,399 @@
     flex-direction: column;
     gap: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
+  } */
   
-  .shimmer-image {
+  /* .shimmer-image {
     width: 100%;
     height: 120px;
     background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
     background-size: 200% 100%;
     animation: shimmer-animation 1.5s infinite;
     border-radius: 8px;
-  }
+  } */
   
-  .shimmer-title {
+  /* .shimmer-title {
     width: 70%;
     height: 15px;
     background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
     background-size: 200% 100%;
     animation: shimmer-animation 1.5s infinite;
     border-radius: 5px;
-  }
+  } */
   
-  .shimmer-text {
+  /* .shimmer-text {
     width: 90%;
     height: 12px;
     background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
     background-size: 200% 100%;
     animation: shimmer-animation 1.5s infinite;
     border-radius: 5px;
-  }
+  } */
   
-  @keyframes shimmer-animation {
+  /* @keyframes shimmer-animation {
     0% {
       background-position: -200% 0;
     }
     100% {
       background-position: 200% 0;
     }
+  } */
+  
+
+  /* Base styles */
+:root {
+    --primary-color: #f97316;
+    --primary-hover: #ea580c;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
   
+  /* Reset and base styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+    color: var(--gray-800);
+  }
+  
+  /* Header styles */
+  .header {
+    background-color: white;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .nav-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo-container img {
+    height: 3rem;
+    width: auto;
+  }
+  
+  .nav-items {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+  }
+  
+  .nav-items li a {
+    color: var(--gray-700);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .nav-items li a:hover {
+    color: var(--gray-900);
+  }
+  
+  .login {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .login:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  /* Body and filter styles */
+  .body {
+    background-color: var(--gray-50);
+    min-height: 100vh;
+    padding: 2rem 0;
+  }
+  
+  .filter {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .search {
+    display: flex;
+    gap: 0.5rem;
+    position: relative;
+  }
+  
+  .search-box {
+    padding: 0.5rem 1rem;
+    padding-left: 2.5rem;
+    border: 1px solid var(--gray-300);
+    border-radius: 0.375rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .search-box:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+  }
+  
+  .search button {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .search button:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--gray-100);
+    color: var(--gray-700);
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .filter-btn:hover {
+    background-color: var(--gray-200);
+  }
+  
+  /* Restaurant container and cards */
+  .res-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .res-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: box-shadow 0.2s;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .res-card:hover {
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .res-logo {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+  }
+  
+  .res-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    padding: 1rem 1rem 0.5rem;
+  }
+  
+  .res-card h4 {
+    color: var(--gray-600);
+    font-size: 0.875rem;
+    font-weight: normal;
+    padding: 0 1rem 0.5rem;
+  }
+  
+  /* Restaurant menu styles */
+  .menu {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+  
+  .menu h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .menu > p {
+    text-align: center;
+    color: var(--gray-600);
+    margin-bottom: 2rem;
+  }
+  
+  .menu h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .menu ul {
+    list-style: none;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-md);
+    padding: 1.5rem;
+  }
+  
+  .menu li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  
+  .menu li:last-child {
+    border-bottom: none;
+  }
+  
+  .menu li button {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .menu li button:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  /* Shimmer effect styles */
+  .shimmer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .shimmer-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+  
+  .shimmer-image {
+    width: 100%;
+    height: 12rem;
+    background-color: var(--gray-200);
+    animation: shimmer 1.5s infinite;
+  }
+  
+  .shimmer-title {
+    height: 1.5rem;
+    background-color: var(--gray-200);
+    margin: 1rem;
+    border-radius: 0.25rem;
+    animation: shimmer 1.5s infinite;
+  }
+  
+  .shimmer-text {
+    height: 1rem;
+    background-color: var(--gray-200);
+    margin: 0 1rem 1rem;
+    border-radius: 0.25rem;
+    animation: shimmer 1.5s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .filter {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .nav-items {
+      gap: 1rem;
+    }
+    
+    .menu {
+      padding: 1rem;
+    }
+  }
+  
+  /* Error page styles */
+  .error-container {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .error-container h1 {
+    font-size: 2rem;
+    color: var(--gray-800);
+    margin-bottom: 1rem;
+  }
+  
+  .error-container h3 {
+    color: var(--gray-600);
+    margin-bottom: 0.5rem;
+  }
+  
+  /* About and Contact page styles */
+  .about-container,
+  .contact-container {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .about-container h1,
+  .contact-container h1 {
+    font-size: 2rem;
+    color: var(--gray-800);
+    margin-bottom: 1rem;
+  }
+  
+  .about-container h3,
+  .contact-container h3 {
+    color: var(--gray-600);
+  }
