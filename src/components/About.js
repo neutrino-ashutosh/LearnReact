@@ -1,37 +1,14 @@
+import User from "./User";
 import UserClass from "./UserClass";
-import react from "react";
 
-class About extends react.Component {
-
-  constructor(props){
-    super(props);
-    console.log("Parent constructor called");
-
-  }
-
-  componentDidMount(){
-    console.log("parent component mounted");
-  }
-
-  render() {
-    console.log("parent render called");
-    
+const About = () => {
     return (
-      <div>
-        <h1>About Us</h1>
-        <h3>learning react and building this online restaurant like page in react</h3>
-        <UserClass name={"First"} location={"Delhi"} />
-        <UserClass name={"Second"} location={"US"} />
-      </div>
+        <div>
+            <h1>welcome to my project </h1>
+            <User name = {"Ashutosh Ojha"} />
+            <UserClass name = {"First child class"} />
+            
+        </div>
     );
-  }
-}
-
-// const About = () =>{
-//   return (  
-//    
-     
-//   );
-// };
-
+};
 export default About;

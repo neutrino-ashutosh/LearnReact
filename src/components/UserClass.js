@@ -1,41 +1,60 @@
-import React from 'react';
+import React from "react";  //React.component will come from here
 
-class UserClass extends React.Component {
+class UserClass extends React.Component{
 
-  constructor (props) {
-    super(props); //why do we always have to write it ??
-    this.state = {
-      count : 0,
-    };
+    constructor(props){
+        super(props);  //Why super is used? Calls the parent class constructor, which is required to initialize the new component 
 
-    console.log(this.props.name + "child constructor called");
-    // console.log( props);
-  }
+        console.log(props);
+        this.state = {
+            userInfo :{
+                //Default data
+                name: "Dummy",
+                location : "delhi",
+                
+                
 
-  componentDidMount() {
-    console.log( this.props.name +"child component mounted");
-  }
+            },
+            count : 0,
+        };
+    }
 
-  render() {
+    async componentDidMount(){
+        console.log(" Child component is Mounted");
 
-    console.log(this.props.name + "child render called");
+        const data = await fetch('https://api.github.com/users/neutrino-ashutosh');
+        const json =  await data.json();
+        console.log(json);
 
-    const {name , location } = this.props;
-    const {count } = this.state;
+        this.setState({
+            userInfo : json,
+        });
+    }
+    render(){
 
-    return (
-      <div className="user-card">
-        <h1> count : {count} </h1>
-          <button onClick={() =>{
-            this.setState({count : count + 1});
-          }}> Count Increase </button>
-     
-        <h2> Name : {name} </h2>
-        <h3> Location : {location} </h3>
-        <h3> Contact : neutrino.ashutosh@gmail.com </h3>
-      </div>
-    )
-  }
+        return(
+           <div className="user-card">
+              <h1>Count: {this.state.count}</h1>
+
+              <button 
+                onClick = {() => {
+                   this.setState({
+                     count : this.state.count + 1,
+                   });
+                }}>Click me
+               </button>
+               <br/><br/>
+
+               <img src= {this.state.userInfo.avatar_url}></img>
+
+              <h2>Name: {this.state.userInfo.name}</h2>
+
+              <h3>Role: Frontend Developer</h3>
+              <h4>Location:{this.state.userInfo.location}</h4>
+              <h4>Contact: neutrino.ashutosh@gmail.com</h4>
+           </div>
+        )
+    }
 }
 
 export default UserClass;
